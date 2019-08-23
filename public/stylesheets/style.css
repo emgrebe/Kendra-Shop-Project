@@ -1,0 +1,72 @@
+#welcome-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+}
+
+button, a {
+  background: #F4E200;
+  width: 100px;
+  margin: 20px 0 20px 0;
+  border-radius: 10px;
+  width: 100%;
+  text-decoration: underline;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+button:hover, a:hover {
+  background: #59A1CE;
+  color: white;
+}
+
+#ksBoxes {
+  height: 150px;
+  width: 130px;
+}
+
+h1 {
+  margin: 5px 0 0 0;
+  grid-column: 3/6;
+  grid-row: 1/2;
+  text-align: center;
+  font-size: 55px;
+}
+
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 5px 10px 5px 10px;
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+
+#leftImg {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  height: 100%;
+  width: 100%;
+}
+
+#rightImg {
+  grid-column: 4/6;
+  grid-row: 2/4;
+  height: 100%;
+  width: 100%;
+}
+
+h1, button, a {
+  font-family: 'Euphoria Script', cursive;
+}
