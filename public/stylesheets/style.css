@@ -89,7 +89,7 @@ footer {
 }
 
 #goldOption, #silverOption, #gunmetalOption, #rsgOption, #colorfulOption, #allprod {
- font-size: 150%;
+ font-size: 100%;
 }
 
 button, a, #gold, #silver, #rsg, #gunmetal, #colorful, #allProducts, .navbar-fixed {
