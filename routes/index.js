@@ -6,6 +6,9 @@ var passport = require('passport');
 router.get('/', function(req, res) {
   res.render('index', {title: 'Kendra Products'});
 });
+router.post('/show', function(req, res) {
+  res.render('show', {title: 'Kendra Products'});
+});
 router.get('/auth/google', passport.authenticate(
   'google',
   {scope: ['profile', 'email']}

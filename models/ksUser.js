@@ -1,14 +1,24 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var ksUserSchema = new Schema( {
+var cartSchema = new Schema({
+  name: String,
+  style: String,
+  metal: String,
+  price: Number,
+})
+
+var ksUserSchema = new Schema({
   name: String,
   email: String,
   city: String,
   avatar: String,
   googleId: String,
+  cart: [cartSchema]
 }, {
   timestamps: true
 });
+
+
 
 module.exports = mongoose.model('KsUser', ksUserSchema);

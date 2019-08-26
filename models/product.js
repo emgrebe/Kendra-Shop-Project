@@ -16,8 +16,8 @@ var productSchema = new Schema({
   metal: {
     type: String,
     enum: ['Gold', 'Silver', 'Rosegold', 'Gunmetal'
-    , 'Colorful', 'All'],
-    default: 'All',
+    , 'Colorful'],
+    default: 'Gold',
     required: true
   },
   price: {
