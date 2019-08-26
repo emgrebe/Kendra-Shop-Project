@@ -6,10 +6,9 @@ var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
 
-require('dotenv').config();
-
 var app = express();
 
+require('dotenv').config();
 require('./config/database');
 require('./config/passport');
 
@@ -35,6 +34,7 @@ app.use(passport.session());
 
 app.use('/', indexRoutes);
 app.use('/products', productsRoutes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

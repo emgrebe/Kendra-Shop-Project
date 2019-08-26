@@ -4,6 +4,6 @@ var productCtrl = require('../controllers/products');
 
 /* GET users listing. */
 router.get('/', productCtrl.index);
-router.post('/show', productCtrl.show)
+router.get('/orders', productCtrl.charge)
 
 module.exports = router;

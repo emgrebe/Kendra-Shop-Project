@@ -7,13 +7,27 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Kendra Products</title>
+  <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
 </head>
 <body>
+  <form action='/products/orders/charge' method='POST'>
   <section id='show-all-page'>
-    <img src='images/ksBoxes'>
-    <div><%= product.name %></div>
-    <div><%= product.price %></div>
-    <div><%= product.description %></div>
+    <input type='submit' value='Add To Cart'>
   </section>
+  </form>
+
+  <!-- <form action="/your-server-side-code" method="POST">
+    <script
+      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="pk_live_e5Q8UWif7TONX1oR03mUHIKu00SOCWk6fF"
+      data-amount="999"
+      data-currency="USD"
+      data-name="My Company"
+      data-description="Products"
+      data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+      data-locale="auto"
+      data-zip-code="true">
+    </script>
+  </form> -->
 </body>
 </html>

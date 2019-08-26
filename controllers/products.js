@@ -1,9 +1,15 @@
+var KsUser = require('../models/ksUser');
 var Product = require('../models/product');
 
 module.exports = {
   index,
-  show
+  show,
+  charge
 };
+
+function charge(req, res) {
+  res.render('products/orders/charge');
+}
 
 function show(req, res) {
   Product.findById(req.params.id, function(err, product) {
