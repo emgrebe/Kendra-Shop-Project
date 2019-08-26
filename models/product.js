@@ -1,7 +1,11 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var productSchema = new Schema( {
+var productSchema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
   style: {
     type: String,
     enum: ['Necklaces', 'Earrings', 'Bracelets', 

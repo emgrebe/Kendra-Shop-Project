@@ -7,7 +7,55 @@
   height: 100vh;
 }
 
-div {
+#products-index-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr 5fr 3fr;
+  margin: 0;
+  height: 100vh;
+}
+
+.nav-wrapper {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-fixed {
+  grid-row: 1/2;
+  grid-column: 1/5;
+  height: 50px;
+}
+
+#top-options {
+  grid-row: 2/3;
+  grid-column: 2/4;
+}
+
+#bottom-options {
+  grid-row: 3/4;
+  grid-column: 1/5;
+}
+
+#top-options, #bottom-options {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  grid-row: 4/5;
+  grid-column: 1/5;
+  background: url('/images/ksfooter.jpeg') fixed;
+  height: 70px;
+}
+
+#middleColumn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,10 +64,26 @@ div {
   grid-column: 3 / 4;
 }
 
-button, a {
+#gold, #silver, #rsg, #gunmetal, #colorful {
+  display: flex;
+  flex-direction: row;
+}
+
+#gold, #silver, #gunmetal {
+  width: 300px;
+}
+
+#rsg, #colorful {
+  width: 250px;
+}
+
+button, a, #gold, #silver, #rsg, #gunmetal, #colorful, .navbar-fixed {
   background: #F4E200;
+}
+
+button, a {
   width: 100px;
-  margin: 20px 0 20px 0;
+  /* margin: 20px 0 20px 0; */
   border-radius: 10px;
   width: 100%;
   text-decoration: underline;
@@ -28,7 +92,7 @@ button, a {
   text-align: center;
 }
 
-button:hover, a:hover {
+button:hover, a:hover, #login:hover, #logout:hover, #necklaces:hover, #earrings:hover, #bracelets:hover, #rings:hover {
   background: #59A1CE;
   color: white;
 }
@@ -67,6 +131,58 @@ p {
   width: 100%;
 }
 
-h1, button, a {
+h1, h3, button, a {
   font-family: 'Euphoria Script', cursive;
+}
+
+#ders, #steph, #model {
+  height:150px;
+  width:180px;
+}
+
+#me, #meg {
+  height: 180px;
+  width: 120px;
+}
+
+#back {
+  border: solid 3px white;
+  grid-column: 1/2;
+  float: left;
+  width: 60px;
+} 
+
+#allprod{
+  border: solid 3px white;
+  grid-column: 4/5;
+  float: right;
+  width: 125px;
+}
+
+h3 {
+  text-align: center;
+}
+
+#login, #logout, #necklaces, #bracelets, #earrings, #rings {
+  background: white;
+  width: 120px;
+  align-items: center;
+}
+
+#login, #logout {
+  font-size: 15px;
+}
+
+#top-options, #bottom-options {
+ justify-content: center;
+ /* margin: 30px; */
+ width: 100vw;
+}
+
+#gold, #silver, #gunmetal, #rsg {
+  margin-right: 30px;
+}
+
+#necklaces, #bracelets, #earrings, #rings {
+  height: 30px;
 }

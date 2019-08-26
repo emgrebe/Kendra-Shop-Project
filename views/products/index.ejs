@@ -9,25 +9,52 @@
     <title>Kendra Products</title>
   </head>
   <body id='products-index-page'>
-    <h1>Krazy Kendra Sale</h1>
-    <form action='/products' method='GET'>
-      <div>
-        <div>
-          <p>
-            <label name='sort' type='radio' id='sort-price' value='price' class='with-gap' 
-            <%=  %>>
-              <span>Sort price</span>
-            </label> 
-          </p>
-          <p>
-            <label for='sort-price'>
-              <input name='sort' type='radio' id='sort-price' vale='price' class='with-gap'
-              <%= sortKey === 'price' ? 'checked' : '' %>>
-              <span>Sort by Price </span>
-            </label>
-          </p>
+    <div class='navbar-fixed'>
+      <nav>
+        <div class='nav-wrapper'>
+          <a id='necklaces' href='/products'> Necklaces </a><br>
+          <a id='bracelets' href='/products'> Bracelets </a><br>
+          <a id='earrings' href='/products'> Earrings </a><br>
+          <a id='rings' href='/products'> Rings </a><br>
+          <ul>
+              <% if (ksUser) { %>
+                <a id='logout' href='/logout'> Log Out </a>
+              <% } else { %>
+                <a id='login' href='/auth/google'>Login with Google</a>
+              <% } %>
+          </ul>
+        </div> 
+      </nav>
+    </div>
+    <div id='options'>
+      <div id='top-options'>
+        <div id='gold'>
+          <img id='ders' src='images/dersGold.jpeg'>
+          <h3> Gold Options </h3>
+        </div>
+        <div id='silver'>
+          <img id='steph' src='images/stephSlv.jpeg'>
+          <h3> Rhodium Options </h3>
+        </div>
+        <div id='gunmetal'>
+          <img id='model' src='images/gunmetal.jpeg'>
+          <h3> Gunmetal Options </h3>
+        </div>
       </div>
-    </form>
-    <a href='/products'>View Products</a>
+      <div id='bottom-options'>
+          <div id='rsg'>
+            <img id='meg' src='images/megRsg.jpeg'>
+            <h3> Rose Gold Options </h3>
+          </div>
+        <div id='colorful'>
+          <img id='me' src='images/colorful.jpeg'>
+          <h3> Colorful Options </h3>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <a id='back' href='/'> Back </a>
+      <a id='allprod' href='/show'> All Products </a>
+    </footer>
   </body>
 </html>
