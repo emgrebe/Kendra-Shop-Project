@@ -2,21 +2,18 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var cartSchema = new Schema({
-  name: String,
-  style: String,
-  metal: String,
-  price: Number,
-})
+  owner: String,
+  total: Number,
+  items: String,
+  price: Number
+});
 
 var ksUserSchema = new Schema({
-  name: String,
   email: String,
-  city: String,
-  avatar: String,
+  name: String,
+  address: String,
   googleId: String,
   cart: [cartSchema]
-}, {
-  timestamps: true
 });
 
 

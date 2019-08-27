@@ -28,7 +28,8 @@ var productSchema = new Schema({
   availability: {
     type: Boolean,
     default: true
-  }
+  },
+  image: String,
 });
 
 module.exports = mongoose.model('Product', productSchema);
