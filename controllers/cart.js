@@ -1,24 +1,20 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+var Cart = require('../models/cart');
 
 module.exports = {
   create,
   addItem
 }
 
-function addItem(req, res, next) {
+function addItem(req, res) {
   req.ksUser.items.push(req.body);
   req.ksUser.save(function(err) {
     res.redirect('/products')
   })
 }
 
-function create (req, res, next) {
-  const token = req.body.stripeToken;
-  return stripe.charges.create({
-    amount: parseInt(process.env.STRIPE_COST, 10),
-    currency: process.env.STRIPE_CCY,
-    source: token,
-    description: 'Products',
-    metadata: {},
+function create (req, res) {
+  var cart = new Cart(req.body);
+  cart.save(function(err) {
+    if(err) return res.render('orders/new');
   });
 }

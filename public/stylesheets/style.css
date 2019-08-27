@@ -1,3 +1,5 @@
+/* views/products/index */
+
 #welcome-page {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -7,127 +9,27 @@
   height: 100vh;
 }
 
-#products-index-page {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 5fr 5fr 3fr;
-  margin: 2%;
-  height: 100vh;
-}
-
-.nav-wrapper {
-  height: 50%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.navbar-fixed {
-  grid-row: 1/2;
-  grid-column: 1/5;
-  height: 100%;
-}
-
-#gold {
-  grid-row: 2/3;
-  grid-column: 1/2;
-}
-#silver {
-  grid-row: 2/3;
-  grid-column: 2/3;
-}
-#rsg{
-  grid-row: 2/3;
-  grid-column: 3/4;
-}
-#gunmetal {
-  grid-row: 2/3;
-  grid-column: 4/5;
-}
-#colorful {
-  grid-row: 3/4;
-  grid-column: 2/3;
-}
-#allprod {
-  grid-row: 3/4;
-  grid-column: 3/4;
-}
-
-#top-options, #bottom-options {
-  display: flex;
-  flex-direction: row;
-  grid-column: 1/5;
-}
-
-footer {
-  grid-row: 4/5;
-  grid-column: 1/5;
-  background: url('/images/ksfooter.jpeg') fixed;
-  height: 200%;
-}
-
 #middleColumn {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-row: 2 / 3;
-  grid-column: 3 / 4;
+  grid-row: 2/3;
+  grid-column: 3/4;
 }
 
-#gold, #silver, #rsg, #gunmetal, #colorful, #allProducts {
-  display: flex;
-  flex-direction: row;
+#middle{
+  width: 90%;
+  height: 10%;
+  font-size: 200%;
 }
 
-#gold, #silver, #gunmetal {
-  width: 80%;
-}
-
-#rsg, #colorful, #allProducts {
-  width: 40%;
-}
-
-#goldOption, #silverOption, #gunmetalOption, #rsgOption, #colorfulOption, #allprod {
- font-size: 100%;
-}
-
-button, a, #gold, #silver, #rsg, #gunmetal, #colorful, #allProducts, .navbar-fixed {
-  background: #F4E200;
-}
-
-button, a {
-  width: 50%;
-  border-radius: 10px;
-  text-decoration: underline;
-  font-size: 100%;
-  color: black;
-  text-align: center;
-}
-
-button:hover, a:hover, #login:hover, #logout:hover, #necklaces:hover, #earrings:hover, #bracelets:hover, #rings:hover {
-  background: #59A1CE;
-  color: white;
-}
-
-#ksBoxes {
-  height: 50%;
-  width: 70%;
-}
-
-h1 {
-  margin: auto;
-  grid-column: 3/6;
-  grid-row: 1/2;
-  text-align: center;
-  font-size: 350%;
-}
-
-p {
+#info {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: auto;
   grid-column: 1/4;
   grid-row: 3/4;
+  font-size: 200%;
 }
 
 #leftImg {
@@ -144,8 +46,99 @@ p {
   width: 100%;
 }
 
-h1, h3, button, a {
-  font-family: 'Euphoria Script', cursive;
+#ksBoxes {
+  height: 60%;
+  width: 80%;
+}
+
+/* views/products/index */
+
+#products-index-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr 5fr 3fr;
+  margin: 2%;
+  height: 100vh;
+}
+
+.nav-wrapper {
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+}
+
+.navbar-fixed {
+  grid-row: 1/2;
+  grid-column: 1/5;
+}
+
+#gold {
+  grid-column: 1/2;
+}
+
+#colorful {
+  grid-row: 3/4;
+}
+
+#rsg, #allprod {
+  grid-column: 3/4;
+}
+
+#gunmetal {
+  grid-column: 4/5;
+}
+
+#gold, #silver, #rsg, #gunmetal {
+grid-row: 2/3;
+}
+
+#silver, #colorful {
+  grid-column: 2/3;
+}
+
+#silver, #colorful, #allprod {
+  grid-row: 3/4;
+}
+
+#top-options, #bottom-options {
+  display: flex;
+  flex-direction: row;
+  grid-column: 1/5;
+}
+
+#gold, #silver, #rsg, #gunmetal, #colorful, #allProducts {
+  display: flex;
+  flex-direction: row;
+  border: solid 30px white;
+}
+
+#rsg, #colorful, #allProducts {
+  width: 40%;
+}
+
+#goldOption, #silverOption, #gunmetalOption, #rsgOption, #colorfulOption, #allprod {
+ font-size: 150%;
+}
+
+#footer-index {
+  grid-row: 4/5;
+  grid-column: 1/5;
+  background: url('/images/ksfooter.jpeg') fixed;
+  height: 200%;
+}
+
+#necklaces, #bracelets, #earrings, #rings, #opt {
+  background: white;
+  width: 15%;
+  align-items: center;
+  font-size: 150%;
+}
+
+#login, #logout, #cart {
+  font-size: 120%;
+  width: 5%;
 }
 
 #ders, #steph, #model, #boxes {
@@ -158,24 +151,80 @@ h1, h3, button, a {
   width: 75%;
 }
 
+/* views/products/show */
+#all-products-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr 5fr 3fr;
+  margin: 2%;
+  height: 100vh;
+}
+
+#nav {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+
+/* multiple views */
+
+#back, #middle, #gold, #silver, #rsg, #gunmetal, #colorful, #allProducts, .navbar-fixed {
+  background: #F4E200;
+}
+
+button, a {
+  width: 50%;
+  border-radius: 10px;
+  text-decoration: underline;
+  font-size: 100%;
+  color: black;
+  text-align: center;
+}
+
+button:hover, a:hover, #middle:hover, #login:hover, #logout:hover, #necklaces:hover, #earrings:hover, #bracelets:hover, #rings:hover {
+  background: #59A1CE;
+  color: white;
+}
+
+h1 {
+  margin: auto;
+  grid-column: 3/6;
+  grid-row: 1/2;
+  text-align: center;
+  font-size: 550%;
+}
+
+h1, h3, button, a {
+  font-family: 'Euphoria Script', cursive;
+}
+
 #back {
   border: solid 3px white;
   grid-column: 1/2;
   float: left;
   width: 10%;
+  font-size: 150%;
 } 
 
 h3 {
   text-align: center;
 }
 
-#necklaces, #bracelets, #earrings, #rings {
-  background: white;
-  width: 15%;
-  align-items: center;
+#Img {
+  grid-column: 1/2;
+  grid-row: 2/4; 
+  width: 100%;
+  border: solid 50px white;
 }
 
-#login, #logout, #cart {
-  font-size: 70%;
-  width: 5%;
+#detail {
+  grid-column: 2/3;
+  grid-row: 2/4;
+  text-align: center;
+}
+
+#footer-show {
+  grid-row: 4/5;
+  grid-column: 1/3;
+  background: url('/images/ksfooter.jpeg') fixed;
+  height: 200%;
 }

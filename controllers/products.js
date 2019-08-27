@@ -1,4 +1,3 @@
-var KsUser = require('../models/ksUser');
 var Product = require('../models/product');
 
 module.exports = {
@@ -7,6 +6,7 @@ module.exports = {
   addItem,
   charge
 };
+
 function index(req, res) {
   console.log(req.query);
   let modelQuery = req.query.price ? {price: new RegExp(req.query.price, 'i')} : {};
@@ -16,7 +16,7 @@ function index(req, res) {
     if(err) return next(err);
     res.render('products/index', {
       products,
-      ksUser: req.ksUser,
+      ksUser: req.user,
       price: req.query.price,
       sortKey
     });
@@ -31,11 +31,11 @@ function addItem(req, res, next) {
 }
 
 function charge(req, res) {
-  res.render('products/orders/charge');
+  res.render('products/orders/new');
 }
 
 function show(req, res) {
   Product.findById(req.params.id, function(err, product) {
-    res.render('products/show', {title: 'Product Deatil', products});
+    res.render('products/show', {title: 'Product Detail', products});
   });
 }

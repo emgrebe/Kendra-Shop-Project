@@ -6,4 +6,4 @@
 
 ## As a signed-up User:
   ### I want to be able to add items to my cart by clicking the 'Add' button.
-  ### I want to be able to delete an item from my cart incase I accidentally add it.# Kendra-Shop-Project
+  ### I want to be able to delete an item from my cart incase I accidentally add it.

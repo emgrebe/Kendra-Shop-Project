@@ -4,28 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Product Detail</title>
   <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
 </head>
-<body>
-  <form action='/products/orders/charge' method='POST'>
-    <input type='submit' value='Add To Cart'>
-  </form>
-
-  <!-- <form action="/your-server-side-code" method="POST">
-    <script
-      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-      data-key="pk_live_e5Q8UWif7TONX1oR03mUHIKu00SOCWk6fF"
-      data-amount="999"
-      data-currency="USD"
-      data-name="My Company"
-      data-description="Products"
-      data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-      data-locale="auto"
-      data-zip-code="true">
-    </script>
-  </form> -->
+<body id='all-products-page'>
+    <div id='nav' class='navbar-fixed'>
+      <nav>
+        <div class='nav-wrapper'>
+          <a id='opt' href='/products/metals/gold'> Gold </a>
+          <a id='opt' href='/products/metals/rosegold'> Rosegold </a>
+          <a id='opt' href='/products/metals/silver'> Silver </a>
+          <a id='opt' href='/products/metals/gunmetal'> Gunmetal </a>
+          <a id='opt' href='/products/metals/colorful'> Colorful </a>
+          <a id='cart' href='/products/orders'> View Cart </a>
+        </div>
+      </nav>
+    </div>
+    <div>
+      <img id='Img' src='/images/items/gunmetal/gnmt-alex.png'>
+      <form action='/products/orders/new' method='POST'>
+        <p id='detail'>Name: Alex<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Abalone<br>Customized<br>Price: $30</p>
+        <input type='submit' value='Add To Cart'>
+      </form>
+    </div>
+    <div>
+      <img id='Img' src='/images/items/gunmetal/gnmt-darrell.png'>
+      <form action='/products/orders/new' method='POST'>
+        <p id='detail'>Name: Darrell<br>Style: Necklace<br>Metal: Gunmetal<br>Stones: Abalone, Dichroic Glass, and Clear<br>Price: $55</p>
+        <input type='submit' value='Add To Cart'>
+      </form>
+    </div>
+    <div>
+      <img id='Img' src='/images/items/gunmetal/gnmt-elora.png'>
+      <form action='/products/orders/new' method='POST'>
+        <p id='detail'>Name: Elora<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Sky Blue Illusion<br>Price: $35</p>
+        <input type='submit' value='Add To Cart'>
+      </form>
+    </div>
+    <div>
+      <img id='Img' src='/images/items/gunmetal/ngnmt-malia.png'>
+      <form action='/products/orders/new' method='POST'>
+        <p id='detail'>Name: Malia<br>Style: Bracelet<br>Metal: Navy-Gunmetal<br>Price: $20</p>
+        <input type='submit' value='Add To Cart'>
+      </form>
+    </div>
+    <footer id='footer-show'>
+      <a  id='back' href='/products'> Back </a>
+    </footer>
+    
 </body>
 </html>
