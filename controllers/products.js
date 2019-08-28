@@ -23,19 +23,20 @@ function index(req, res) {
   });
 }
 
-function addItem(req, res, next) {
-  req.ksUser.items.push(req.body);
-  req.ksUser.save(function(err) {
+
+function addItem(req, res) {
+  req.user.cart.push(req.body);
+  req.user.save(function(err) {
     res.redirect('/products')
   })
 }
 
 function charge(req, res) {
-  res.render('products/orders/new');
+  res.render('products/orders/new', {user: req.user});
 }
 
 function show(req, res) {
   Product.findById(req.params.id, function(err, product) {
-    res.render('products/show', {title: 'Product Detail', products});
+    res.render('products/show', {title: 'Product Detail', product});
   });
 }

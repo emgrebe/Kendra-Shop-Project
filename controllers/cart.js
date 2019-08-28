@@ -1,20 +1,19 @@
 var Cart = require('../models/cart');
 
 module.exports = {
-  create,
+  cart,
   addItem
 }
 
 function addItem(req, res) {
-  req.ksUser.items.push(req.body);
-  req.ksUser.save(function(err) {
-    res.redirect('/products')
+  req.user.cart.push(req.body);
+  req.user.save(function(err) {
+    res.redirect('/orders/new')
   })
 }
 
-function create (req, res) {
-  var cart = new Cart(req.body);
-  cart.save(function(err) {
-    if(err) return res.render('orders/new');
+function cart(req, res) {
+  res.render('orders/new', {
+    user: req.user
   });
 }

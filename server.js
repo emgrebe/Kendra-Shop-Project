@@ -13,7 +13,7 @@ require('./config/database');
 require('./config/passport');
 
 var indexRoutes = require('./routes/index');
-// var cartRoutes = require('./routes/cart');
+var cartRoutes = require('./routes/cart');
 var productsRoutes = require('./routes/products');
 var gunmetalRoutes = require('./routes/gunmetal');
 
@@ -35,7 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', indexRoutes);
-// app.use('/cart', cartRoutes);
+app.use('/', cartRoutes);
 app.use('/products', productsRoutes);
 app.use('/gunmetal', gunmetalRoutes);
 

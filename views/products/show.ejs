@@ -24,7 +24,9 @@
     </div>
     <div>
       <img id='Img' src='/images/gunmetal/gnmt-alex.png'>
-      <form action='/products/orders/new' method='POST'>
+      <form action='/products/addToCart' method='POST'>
+        <input type='hidden' name="item" value='Alex<br>Style: Earrings<br>Metal: Gunmetal'>
+        <input type='hidden' name="price" value='30'>
         <p id='detail'>Name: Alex<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Abalone<br>Customized<br>Price: $30</p>
         <input type='submit' value='Add To Cart'>
       </form>
@@ -50,6 +52,49 @@
         <input type='submit' value='Add To Cart'>
       </form>
     </div>
+    <div>
+      <img id='Img' src='/images/gold/gld-brett.png'>
+      <form action='/products/orders/new' method='POST'>
+        <p id='detail'>Name: Brett<br>Style: Necklace<br>Metal: Gold<br>Season: Winter 2017<br>Discontinued<br>Price: $20</p>
+        <input type='submit' value='Add To Cart'>
+      </form>   
+    </div>
+    <div>
+      <img id='Img' src='/images/gold/gld-reagan.png'>
+      <form action='/products/orders/new' method='POST'>
+        <p id='detail'>Name: Reagan<br>Style: Ring<br>Metal: Gold<br>Season: Fall 2018<br>Price: $20</p>
+        <input type='submit' value='Add To Cart'>
+      </form>
+    </div>
+    <div>
+      <form action='/products/orders/new' method='POST'>
+      <img id='Img' src='/images/silver/rhod-ember.png'>
+        <p id='detail'>Name: Ember<br>Style: Necklace<br>Metal: Silver<br>Season: Fall 2018<br>Discontinued<br>Price: $15</p>
+        <input type='submit' value='Add To Cart'>
+      </form>
+    </div>
+    <div>
+      <img id='Img' src='/images/rsg/rsg-allie.png'>
+      <form action='/products/orders/new' method='POST'>
+        <p id='detail'>Name: Allie<br>Style: Earrings<br>Metal: Rose Gold<br>Stone: Ivory Mother of Pearl<br>Customized<br>Price: $50</p>
+        <input type='submit' value='Add To Cart'>
+      </form>
+    </div>
+    <div>
+      <img id='Img' src='/images/rsg/rsg-joel.png'>
+      <form action='/products/orders/new' method='POST'>
+        <p id='detail'>Name: Joel<br>Style: Ring<br>Metal: Rose Gold<br>Season: Winter 2018<br>Discontinued<br>Price: $5</p>
+        <input type='submit' value='Add To Cart'>
+      </form>
+    </div>
+    <div>
+      <img id='Img' src='/images/rsg/rsg-pryde.png'>
+      <form action='/products/orders/new' method='POST'>
+        <p id='detail'>Name: Pryde<br>Style: Ring<br>Metal: Rose Gold<br>Season: Winter 2018<br>Discontinued<br>Price: $15</p>
+        <input type='submit' value='Add To Cart'>
+      </form>
+    </div>
+
     <footer id='footer-show'>
       <a  id='back' href='/products'> Back </a>
     </footer>
