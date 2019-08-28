@@ -14,6 +14,7 @@ require('./config/passport');
 
 var indexRoutes = require('./routes/index');
 var productsRoutes = require('./routes/products');
+var gunmetalRoutes = require('./routes/gunmetal');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,6 +35,7 @@ app.use(passport.session());
 
 app.use('/', indexRoutes);
 app.use('/products', productsRoutes);
+app.use('/gunmetal', gunmetalRoutes);
 
 
 // catch 404 and forward to error handler

@@ -152,7 +152,7 @@ grid-row: 2/3;
 }
 
 /* views/products/show */
-#all-products-page {
+#all-products-page, #gunmetal-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 5fr 5fr 3fr;
@@ -180,7 +180,7 @@ button, a {
   text-align: center;
 }
 
-button:hover, a:hover, #middle:hover, #login:hover, #logout:hover, #necklaces:hover, #earrings:hover, #bracelets:hover, #rings:hover {
+button:hover, a:hover, #opt:hover, #middle:hover, #login:hover, #logout:hover, #necklaces:hover, #earrings:hover, #bracelets:hover, #rings:hover {
   background: #59A1CE;
   color: white;
 }

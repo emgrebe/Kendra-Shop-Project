@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Bracelet Products</title>
+</head>
+<body id='earring-page'>
+  <div id='nav' class='navbar-fixed'>
+    <nav>
+      <div class='nav-wrapper'>
+        <a id='opt' href='/products/earrings'> Earrings </a><br>
+        <a id='opt' href='/products/necklaces'> Necklaces </a><br>
+        <a id='opt' href='/products/rings'> Rings </a><br>
+        <a id='opt' href='/products/show'> All Products </a><br>
+        <a id='cart' href='/products/orders'> View Cart </a><br>
+      </div>
+    </nav>
+  </div>
+  <div>
+    <img id='Img' src='/images/gunmetal/ngnmt-malia.png'>
+    <form action='/products/orders/new' method='POST'>
+      <p id='detail'>Name: Malia<br>Style: Bracelet<br>Metal: Navy-Gunmetal<br>Season: Winter 2018<br>Discontinued<br>Price: $20</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <footer id='footer-show'>
+    <a id='back' href='/products'> Back </a>
+  </footer>
+</body>
+</html>

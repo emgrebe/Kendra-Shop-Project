@@ -4,9 +4,9 @@ module.exports = {
   show
 };
 
-
 function show(req, res) {
   Product.findById(req.params.id, function(err, product) {
-    res.render('products/metals/gunmetal', {title: 'Product Detail', products});
+    if (err) console.error(err)
+    res.render('products/gunmetal', {title: 'Gunmetal Products', product});
   });
 }
