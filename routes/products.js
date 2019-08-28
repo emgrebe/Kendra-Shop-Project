@@ -6,5 +6,4 @@ var productCtrl = require('../controllers/products');
 router.get('/', productCtrl.index);
 router.get('/orders', productCtrl.charge);
 
-
 module.exports = router;
