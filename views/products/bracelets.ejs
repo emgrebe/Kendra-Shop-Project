@@ -12,9 +12,9 @@
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
-        <a id='opt' href='/products/earrings'> Earrings </a><br>
-        <a id='opt' href='/products/necklaces'> Necklaces </a><br>
-        <a id='opt' href='/products/rings'> Rings </a><br>
+        <a id='opt' href='/earrings'> Earrings </a><br>
+        <a id='opt' href='/necklaces'> Necklaces </a><br>
+        <a id='opt' href='/rings'> Rings </a><br>
         <a id='opt' href='/products/show'> All Products </a><br>
         <a id='cart' href='/products/orders'> View Cart </a><br>
       </div>
@@ -22,8 +22,10 @@
   </div>
   <div>
     <img id='Img' src='/images/gunmetal/ngnmt-malia.png'>
-    <form action='/products/orders/new' method='POST'>
-      <p id='detail'>Name: Malia<br>Style: Bracelet<br>Metal: Navy-Gunmetal<br>Season: Winter 2018<br>Discontinued<br>Price: $20</p>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Malia Bracelet Set in Navy-Gunmetal'>
+      <input type='hidden' name="price" value='$20'>
+      <p id='detail'>Name: Malia<br>Style: Bracelet<br>Metal: Navy-Gunmetal<br>Season: Winter 2018<br>Price: $20</p>
       <input type='submit' value='Add To Cart'>
     </form>
   </div>

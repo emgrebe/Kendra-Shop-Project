@@ -12,19 +12,21 @@
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
-        <a id='opt' href='/products/gunmetal'> Gunmetal </a><br>
-        <a id='opt' href='/products/gold'> Gold </a><br>
-        <a id='opt' href='/products/rsg'> Rose Gold </a><br>
-        <a id='opt' href='/products/colorful'> Colorful </a><br>
+        <a id='opt' href='/gunmetal'> Gunmetal </a><br>
+        <a id='opt' href='/gold'> Gold </a><br>
+        <a id='opt' href='/rsg'> Rose Gold </a><br>
+        <a id='opt' href='/colorful'> Colorful </a><br>
         <a id='opt' href='/products/show'> All Products </a><br>
         <a id='cart' href='/products/orders'> View Cart </a><br>
       </div>
     </nav>
   </div>
   <div>
-    <form action='/products/orders/new' method='POST'>
     <img id='Img' src='/images/silver/rhod-ember.png'>
-      <p id='detail'>Name: Ember<br>Style: Necklace<br>Metal: Silver<br>Season: Fall 2018<br>Discontinued<br>Price: $15</p>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Ember Necklace in Silver'>
+      <input type='hidden' name="price" value='$15'>
+      <p id='detail'>Name: Ember<br>Style: Necklace<br>Metal: Silver<br>Season: Fall 2018<br>Price: $15</p>
       <input type='submit' value='Add To Cart'>
     </form>
   </div>

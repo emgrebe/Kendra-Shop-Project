@@ -25,10 +25,6 @@ var productSchema = new Schema({
     min: 10,
     max: 150
   },
-  availability: {
-    type: Boolean,
-    default: true
-  },
   image: String,
 });
 

@@ -12,9 +12,9 @@
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
-        <a id='opt' href='/products/necklaces'> Necklaces </a><br>
-          <a id='opt' href='/products/bracelets'> Bracelets </a><br>
-          <a id='opt' href='/products/earrings'> Earrings </a><br>
+        <a id='opt' href='/necklaces'> Necklaces </a><br>
+          <a id='opt' href='/bracelets'> Bracelets </a><br>
+          <a id='opt' href='/earrings'> Earrings </a><br>
           <a id='opt' href='/products/show'> All Products </a>
           <a id='cart' href='/products/orders'> View Cart </a>
       </div>
@@ -22,15 +22,28 @@
   </div>
   <div>
     <img id='Img' src='/images/gold/gld-reagan.png'>
-    <form action='/products/orders/new' method='POST'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Reagan Ring in Gold'>
+      <input type='hidden' name="price" value='$20'>
       <p id='detail'>Name: Reagan<br>Style: Ring<br>Metal: Gold<br>Season: Fall 2018<br>Price: $20</p>
       <input type='submit' value='Add To Cart'>
     </form>
   </div>
   <div>
     <img id='Img' src='/images/rsg/rsg-pryde.png'>
-    <form action='/products/orders/new' method='POST'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Pryde Ring in Rose Gold'>
+      <input type='hidden' name="price" value='$15'>
       <p id='detail'>Name: Pryde<br>Style: Ring<br>Metal: Rose Gold<br>Season: Winter 2018<br>Price: $15</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/rsg/rsg-joel.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Joel Ring in Rose Gold'>
+      <input type='hidden' name="price" value='$5'>
+      <p id='detail'>Name: Joel<br>Style: Ring<br>Metal: Rose Gold<br>Season: Winter 2018<br>Price: $5</p>
       <input type='submit' value='Add To Cart'>
     </form>
   </div>

@@ -5,20 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Document</title>
 </head>
-<body>
+<body id='cart-page'>
   <div class='navbar-fixed'>
-    <nav>
+    <nav id='navCart'>
       <div class='nav-wrapper'>
-        <a id='allprod' href='/products/show'> All Products </a>
+          <a id='opt' href='/gold'> Gold </a><br>
+          <a id='opt' href='/silver'> Silver </a><br>
+          <a id='opt' href='/rsg'> Rose Gold </a><br>
+          <a id='opt' href='/gunmetal'> Gunmetal </a><br>
+          <a id='opt' href='/colorful'> Colorful </a><br>
       </div> 
     </nav>
   </div>
+  <div id='cartWelcome'>
     <h1>Welcome to Your Cart</h1>
-    <h2> <%= user.name %> </h2>
-    <h5>Your Items You Have Selected are Shown Below:</h5>
-  <ul>
+    <h2 id='userName'> <%= user.name %> </h2>
+    <h5 id='userName'>Your Items You Have Selected are Shown Below:</h5>
+  </div>
+  <ul id='cartContent'>
     <% user.cart.forEach(function(item) { %>
     <li>
       <%- item.item %>
@@ -27,7 +34,7 @@
     </li>
   </ul>
 
-  <footer id='footer-show'>
+  <footer id='footer-cart'>
     <a  id='back' href='/products'> Back </a>
   </footer>
 

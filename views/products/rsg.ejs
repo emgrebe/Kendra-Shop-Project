@@ -12,10 +12,10 @@
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
-        <a id='opt' href='/products/gunmetal'> Gunmetal </a><br>
-        <a id='opt' href='/products/gold'> Gold </a><br>
-        <a id='opt' href='/products/silver'> Silver </a><br>
-        <a id='opt' href='/products/colorful'> Colorful </a><br>
+        <a id='opt' href='/gunmetal'> Gunmetal </a><br>
+        <a id='opt' href='/gold'> Gold </a><br>
+        <a id='opt' href='/silver'> Silver </a><br>
+        <a id='opt' href='/colorful'> Colorful </a><br>
         <a id='opt' href='/products/show'> All Products </a><br>
         <a id='cart' href='/products/orders'> View Cart </a><br>
       </div>
@@ -23,21 +23,27 @@
   </div>
   <div>
     <img id='Img' src='/images/rsg/rsg-allie.png'>
-    <form action='/products/orders/new' method='POST'>
-      <p id='detail'>Name: Allie<br>Style: Earrings<br>Metal: Rose Gold<br>Stone: Ivory Mother of Pearl<br>Customized<br>Price: $50</p>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Allie Earrings in Rose Gold'>
+      <input type='hidden' name="price" value='$50'>
+      <p id='detail'>Name: Allie<br>Style: Earrings<br>Metal: Rose Gold<br>Stone: Ivory Mother of Pearl<br>Price: $50</p>
       <input type='submit' value='Add To Cart'>
     </form>
   </div>
   <div>
     <img id='Img' src='/images/rsg/rsg-joel.png'>
-    <form action='/products/orders/new' method='POST'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Joel Ring in Rose Gold'>
+      <input type='hidden' name="price" value='$5'>
       <p id='detail'>Name: Joel<br>Style: Ring<br>Metal: Rose Gold<br>Season: Winter 2018<br>Price: $5</p>
       <input type='submit' value='Add To Cart'>
     </form>
   </div>
   <div>
     <img id='Img' src='/images/rsg/rsg-pryde.png'>
-    <form action='/products/orders/new' method='POST'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Pryde Ring in Rose Gold'>
+      <input type='hidden' name="price" value='$15'>
       <p id='detail'>Name: Pryde<br>Style: Ring<br>Metal: Rose Gold<br>Season: Winter 2018<br>Price: $15</p>
       <input type='submit' value='Add To Cart'>
     </form>

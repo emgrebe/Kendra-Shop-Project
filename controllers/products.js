@@ -23,7 +23,6 @@ function index(req, res) {
   });
 }
 
-
 function addItem(req, res) {
   req.user.cart.push(req.body);
   req.user.save(function(err) {

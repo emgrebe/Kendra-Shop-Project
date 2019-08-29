@@ -12,10 +12,10 @@
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
-        <a id='opt' href='/products/gunmetal'> Gunmetal </a><br>
-        <a id='opt' href='/products/silver'> Silver </a><br>
-        <a id='opt' href='/products/rsg'> Rose Gold </a><br>
-        <a id='opt' href='/products/colorful'> Colorful </a><br>
+        <a id='opt' href='/gunmetal'> Gunmetal </a><br>
+        <a id='opt' href='/silver'> Silver </a><br>
+        <a id='opt' href='/rsg'> Rose Gold </a><br>
+        <a id='opt' href='/colorful'> Colorful </a><br>
         <a id='opt' href='/products/show'> All Products </a><br>
         <a id='cart' href='/products/orders'> View Cart </a><br>
       </div>
@@ -23,14 +23,18 @@
   </div>
   <div>
     <img id='Img' src='/images/gold/gld-brett.png'>
-    <form action='/products/orders/new' method='POST'>
-      <p id='detail'>Name: Brett<br>Style: Necklace<br>Metal: Gold<br>Season: Winter 2017<br>Discontinued<br>Price: $20</p>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Brett Necklace in Gold'>
+      <input type='hidden' name="price" value='$20'>
+      <p id='detail'>Name: Brett<br>Style: Necklace<br>Metal: Gold<br>Season: Winter 2017<br>Price: $20</p>
       <input type='submit' value='Add To Cart'>
     </form>   
   </div>
   <div>
     <img id='Img' src='/images/gold/gld-reagan.png'>
-    <form action='/products/orders/new' method='POST'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Reagan Ring in Gold'>
+      <input type='hidden' name="price" value='$20'>
       <p id='detail'>Name: Reagan<br>Style: Ring<br>Metal: Gold<br>Season: Fall 2018<br>Price: $20</p>
       <input type='submit' value='Add To Cart'>
     </form>

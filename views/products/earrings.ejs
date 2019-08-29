@@ -12,9 +12,9 @@
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
-        <a id='opt' href='/products/bracelets'> Bracelets </a><br>
-        <a id='opt' href='/products/necklaces'> Necklaces </a><br>
-        <a id='opt' href='/products/rings'> Rings </a><br>
+        <a id='opt' href='/bracelets'> Bracelets </a><br>
+        <a id='opt' href='/necklaces'> Necklaces </a><br>
+        <a id='opt' href='/rings'> Rings </a><br>
         <a id='opt' href='/products/show'> All Products </a><br>
         <a id='cart' href='/products/orders'> View Cart </a><br>
       </div>
@@ -22,15 +22,28 @@
   </div>
   <div>
     <img id='Img' src='/images/gunmetal/gnmt-alex.png'>
-    <form action='/products/orders/new' method='POST'>
-      <p id='detail'>Name: Alex<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Abalone<br>Customized<br>Price: $30</p>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Alex Earrings in Gunmetal'>
+      <input type='hidden' name="price" value='$30'>
+      <p id='detail'>Name: Alex<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Abalone<br>Price: $30</p>
       <input type='submit' value='Add To Cart'>
     </form>
   </div>
   <div>
     <img id='Img' src='/images/gunmetal/gnmt-elora.png'>
-    <form action='/products/orders/new' method='POST'>
-      <p id='detail'>Name: Elora<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Sky Blue Illusion<br>Customized<br>Price: $35</p>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Elora Earrings in Gunmetal'>
+      <input type='hidden' name="price" value='$35'>
+      <p id='detail'>Name: Elora<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Sky Blue Illusion<br>Price: $35</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/rsg/rsg-allie.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Allie Earrings in Rose Gold'>
+      <input type='hidden' name="price" value='$50'>
+      <p id='detail'>Name: Allie<br>Style: Earrings<br>Metal: Rose Gold<br>Stone: Ivory Mother of Pearl<br>Price: $50</p>
       <input type='submit' value='Add To Cart'>
     </form>
   </div>
