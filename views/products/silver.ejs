@@ -8,13 +8,13 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Gold Products</title>
 </head>
-<body id='gold-page'>
+<body id='item-page'>
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
-        <a id='opt' href='/gunmetal'> Gunmetal </a><br>
         <a id='opt' href='/gold'> Gold </a><br>
         <a id='opt' href='/rsg'> Rose Gold </a><br>
+        <a id='opt' href='/gunmetal'> Gunmetal </a><br>
         <a id='opt' href='/colorful'> Colorful </a><br>
         <a id='opt' href='/products/show'> All Products </a><br>
         <a id='cart' href='/products/orders'> View Cart </a><br>
@@ -22,11 +22,29 @@
     </nav>
   </div>
   <div>
+    <img id='Img' src='/images/silver/rhod-calista.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Calista Earrings in Silver'>
+      <input type='hidden' name="price" value='$25'>
+      <p id='detail'>Name: Calista<br>Style: Earrings<br>Metal: Silver<br>Season: Winter 2018<br>Price: $25</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
     <img id='Img' src='/images/silver/rhod-ember.png'>
     <form action='/products/addToCart' method='POST'>
       <input type='hidden' name="item" value='Ember Necklace in Silver'>
       <input type='hidden' name="price" value='$15'>
       <p id='detail'>Name: Ember<br>Style: Necklace<br>Metal: Silver<br>Season: Fall 2018<br>Price: $15</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/silver/rhod-angela.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Angela Bracelet in Silver'>
+      <input type='hidden' name="price" value='$10'>
+      <p id='detail'>Name: Angela<br>Style: Bracelet<br>Metal: Silver<br>Season: Fall 2018<br>Price: $10</p>
       <input type='submit' value='Add To Cart'>
     </form>
   </div>

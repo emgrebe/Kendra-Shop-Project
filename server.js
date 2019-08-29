@@ -15,7 +15,15 @@ require('./config/passport');
 var indexRoutes = require('./routes/index');
 var cartRoutes = require('./routes/cart');
 var productsRoutes = require('./routes/products');
+var goldRoutes = require('./routes/gold');
+var silverRoutes = require('./routes/silver');
+var rsgRoutes = require('./routes/rsg');
 var gunmetalRoutes = require('./routes/gunmetal');
+var colorfulRoutes = require('./routes/colorful');
+var earringsRoutes = require('./routes/earrings');
+var necklacesRoutes = require('./routes/necklaces');
+var braceletsRoutes = require('./routes/bracelets');
+var ringsRoutes = require('./routes/rings');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,7 +45,15 @@ app.use(passport.session());
 app.use('/', indexRoutes);
 app.use('/', cartRoutes);
 app.use('/products', productsRoutes);
+app.use('/gold', goldRoutes);
+app.use('/silver', silverRoutes);
+app.use('/rsg', rsgRoutes);
 app.use('/gunmetal', gunmetalRoutes);
+app.use('/colorful', colorfulRoutes);
+app.use('/earrings', earringsRoutes);
+app.use('/necklaces', necklacesRoutes);
+app.use('/bracelets', braceletsRoutes);
+app.use('/rings', ringsRoutes);
 
 
 // catch 404 and forward to error handler

@@ -36,6 +36,6 @@ function charge(req, res) {
 
 function show(req, res) {
   Product.findById(req.params.id, function(err, product) {
-    res.render('products/show', {title: 'Product Detail', product});
+    res.render('products/show', {title: 'Products', product});
   });
 }

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var gunmetalCtrl = require('../controllers/gunmetal');
+var earringsCtrl = require('../controllers/earrings');
 
-router.get('/', gunmetalCtrl.show);
+router.get('/', earringsCtrl.show);
 
 module.exports = router;

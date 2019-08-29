@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title>Bracelet Products</title>
+  <title>Bracelets</title>
 </head>
-<body id='earring-page'>
+<body id='item-page'>
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
@@ -19,6 +19,15 @@
         <a id='cart' href='/products/orders'> View Cart </a><br>
       </div>
     </nav>
+  </div>
+  <div>
+    <img id='Img' src='/images/silver/rhod-angela.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Angela Bracelet in Silver'>
+      <input type='hidden' name="price" value='$10'>
+      <p id='detail'>Name: Angela<br>Style: Bracelet<br>Metal: Silver<br>Season: Fall 2017<br>Price: $10</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
   </div>
   <div>
     <img id='Img' src='/images/gunmetal/ngnmt-malia.png'>

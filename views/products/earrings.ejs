@@ -8,17 +8,53 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Earring Products</title>
 </head>
-<body id='earring-page'>
+<body id='item-page'>
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
-        <a id='opt' href='/bracelets'> Bracelets </a><br>
         <a id='opt' href='/necklaces'> Necklaces </a><br>
+        <a id='opt' href='/bracelets'> Bracelets </a><br>
         <a id='opt' href='/rings'> Rings </a><br>
         <a id='opt' href='/products/show'> All Products </a><br>
         <a id='cart' href='/products/orders'> View Cart </a><br>
       </div>
     </nav>
+  </div>
+  <div>
+    <img id='Img' src='/images/gold/gld-atticus.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Atticus Earrings in Gold'>
+      <input type='hidden' name="price" value='$20'>
+      <p id='detail'>Name: Atticus<br>Style: Earrings<br>Metal: Gold<br>Season: Winter 2017<br>Price: $20</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/silver/rhod-calista.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Calista Earrings in Silver'>
+      <input type='hidden' name="price" value='$25'>
+      <p id='detail'>Name: Calista<br>Style: Earrings<br>Metal: Silver<br>Season: Winter 2017<br>Price: $25</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/rsg/rsg-allie.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Allie Earrings in Rose Gold'>
+      <input type='hidden' name="price" value='$50'>
+      <p id='detail'>Name: Allie<br>Style: Earrings<br>Metal: Rose Gold<br>Stone: Ivory Mother of Pearl<br>Price: $50</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/rsg/rsg-corza.png'>
+    <form action='/products/AddToCart' method='POST'>
+      <input type='hidden' name="item" value='Corza Earrings in Rose Gold'>
+      <input type='hidden' name="price" value='$30'>
+      <p id='detail'>Name: Corza<br>Style: Earrings<br>Metal: Rose Gold<br>Season: Winter 2018<br>Price: $30</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
   </div>
   <div>
     <img id='Img' src='/images/gunmetal/gnmt-alex.png'>
@@ -39,11 +75,11 @@
     </form>
   </div>
   <div>
-    <img id='Img' src='/images/rsg/rsg-allie.png'>
+    <img id='Img' src='/images/colorful/wht-thomas.png'>
     <form action='/products/addToCart' method='POST'>
-      <input type='hidden' name="item" value='Allie Earrings in Rose Gold'>
-      <input type='hidden' name="price" value='$50'>
-      <p id='detail'>Name: Allie<br>Style: Earrings<br>Metal: Rose Gold<br>Stone: Ivory Mother of Pearl<br>Price: $50</p>
+      <input type='hidden' name="item" value='Thomas Earrings in Matte White'>
+      <input type='hidden' name="price" value='$20'>
+      <p id='detail'>Name: Thomas<br>Style: Earrings<br>Metal: Matte White<br>Season: Spring 2018<br>Price: $20</p>
       <input type='submit' value='Add To Cart'>
     </form>
   </div>

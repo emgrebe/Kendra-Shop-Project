@@ -9,109 +9,163 @@
   <title>Product Detail</title>
   <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
 </head>
-<body id='all-products-page'>
-    <div id='nav' class='navbar-fixed'>
-      <nav>
-        <div class='nav-wrapper'>
-          <a id='opt' href='/gold'> Gold </a>
-          <a id='opt' href='/rosegold'> Rosegold </a>
-          <a id='opt' href='/silver'> Silver </a>
-          <a id='opt' href='/gunmetal'> Gunmetal </a>
-          <a id='opt' href='/colorful'> Colorful </a>
-          <a id='cart' href='/products/orders'> View Cart </a>
-        </div>
-      </nav>
-    </div>
-    <div>
-      <img id='Img' src='/images/gunmetal/gnmt-alex.png'>
-      <form action='/products/addToCart' method='POST'>
-        <input type='hidden' name="item" value='Alex Earrings in Gunmetal'>
-        <input type='hidden' name="price" value='$30'>
-        <p id='detail'>Name: Alex<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Abalone<br>Price: $30</p>
-        <input type='submit' value='Add To Cart'>
-      </form>
-    </div>
-    <div>
-      <img id='Img' src='/images/gunmetal/gnmt-darrell.png'>
-      <form action='/products/addToCart' method='POST'>
-        <input type='hidden' name="item" value='Darrell Necklace in Gunmetal'>
-        <input type='hidden' name="price" value='$55'>
-        <p id='detail'>Name: Darrell<br>Style: Necklace<br>Metal: Gunmetal<br>Stones: Abalone, Dichroic Glass, and Clear<br>Price: $55</p>
-        <input type='submit' value='Add To Cart'>
-      </form>
-    </div>
-    <div>
-      <img id='Img' src='/images/gunmetal/gnmt-elora.png'>
-      <form action='/products/addToCart' method='POST'>
-        <input type='hidden' name="item" value='Elora Earrings in Gunmetal'>
-        <input type='hidden' name="price" value='$35'>
-        <p id='detail'>Name: Elora<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Sky Blue Illusion<br>Price: $35</p>
-        <input type='submit' value='Add To Cart'>
-      </form>
-    </div>
-    <div>
-      <img id='Img' src='/images/gunmetal/ngnmt-malia.png'>
-      <form action='/products/addToCart' method='POST'>
-        <input type='hidden' name="item" value='Malia Bracelet Set in Navy-Gunmetal'>
-        <input type='hidden' name="price" value='$20'>
-        <p id='detail'>Name: Malia<br>Style: Bracelet<br>Metal: Navy-Gunmetal<br>Season: Winter 2018<br>Price: $20</p>
-        <input type='submit' value='Add To Cart'>
-      </form>
-    </div>
-    <div>
-      <img id='Img' src='/images/gold/gld-brett.png'>
-      <form action='/products/addToCart' method='POST'>
-        <input type='hidden' name="item" value='Brett Necklace in Gold'>
-        <input type='hidden' name="price" value='$20'>
-        <p id='detail'>Name: Brett<br>Style: Necklace<br>Metal: Gold<br>Season: Winter 2017<br>Price: $20</p>
-        <input type='submit' value='Add To Cart'>
-      </form>   
-    </div>
-    <div>
-      <img id='Img' src='/images/gold/gld-reagan.png'>
-      <form action='/products/addToCart' method='POST'>
-        <input type='hidden' name="item" value='Reagan Ring in Gold'>
-        <input type='hidden' name="price" value='$20'>
-        <p id='detail'>Name: Reagan<br>Style: Ring<br>Metal: Gold<br>Season: Fall 2018<br>Price: $20</p>
-        <input type='submit' value='Add To Cart'>
-      </form>
-    </div>
-    <div>
-      <img id='Img' src='/images/silver/rhod-ember.png'>
-      <form action='/products/addToCart' method='POST'>
-        <input type='hidden' name="item" value='Ember Necklace in Silver'>
-        <input type='hidden' name="price" value='$15'>
-        <p id='detail'>Name: Ember<br>Style: Necklace<br>Metal: Silver<br>Season: Fall 2018<br>Price: $15</p>
-        <input type='submit' value='Add To Cart'>
-      </form>
-    </div>
-    <div>
-      <img id='Img' src='/images/rsg/rsg-allie.png'>
-      <form action='/products/addToCart' method='POST'>
-        <input type='hidden' name="item" value='Allie Earrings in Rose Gold'>
-        <input type='hidden' name="price" value='$50'>
-        <p id='detail'>Name: Allie<br>Style: Earrings<br>Metal: Rose Gold<br>Stone: Ivory Mother of Pearl<br>Price: $50</p>
-        <input type='submit' value='Add To Cart'>
-      </form>
-    </div>
-    <div>
-      <img id='Img' src='/images/rsg/rsg-joel.png'>
-      <form action='/products/addToCart' method='POST'>
-        <input type='hidden' name="item" value='Joel Ring in Rose Gold'>
-        <input type='hidden' name="price" value='$5'>
-        <p id='detail'>Name: Joel<br>Style: Ring<br>Metal: Rose Gold<br>Season: Winter 2018<br>Price: $5</p>
-        <input type='submit' value='Add To Cart'>
-      </form>
-    </div>
-    <div>
-      <img id='Img' src='/images/rsg/rsg-pryde.png'>
-      <form action='/products/addToCart' method='POST'>
-        <input type='hidden' name="item" value='Pryde Ring in Rose Gold'>
-        <input type='hidden' name="price" value='$15'>
-        <p id='detail'>Name: Pryde<br>Style: Ring<br>Metal: Rose Gold<br>Season: Winter 2018<br>Price: $15</p>
-        <input type='submit' value='Add To Cart'>
-      </form>
-    </div>
+<body id='item-page'>
+  <div id='nav' class='navbar-fixed'>
+    <nav>
+      <div class='nav-wrapper'>
+        <a id='opt' href='/gold'> Gold </a>
+        <a id='opt' href='/silver'> Silver </a>
+        <a id='opt' href='/rsg'> Rosegold </a>
+        <a id='opt' href='/gunmetal'> Gunmetal </a>
+        <a id='opt' href='/colorful'> Colorful </a>
+        <a id='cart' href='/products/orders'> View Cart </a>
+      </div>
+    </nav>
+  </div>
+  <div>
+    <img id='Img' src='/images/gold/gld-atticus.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Atticus Earrings in Gold'>
+      <input type='hidden' name="price" value='$20'>
+      <p id='detail'>Name: Atticus<br>Style: Earrings<br>Metal: Gold<br>Season: Winter 2017<br>Price: $20</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/gold/gld-brett.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Brett Necklace in Gold'>
+      <input type='hidden' name="price" value='$20'>
+      <p id='detail'>Name: Brett<br>Style: Necklace<br>Metal: Gold<br>Season: Winter 2017<br>Price: $20</p>
+      <input type='submit' value='Add To Cart'>
+    </form>   
+  </div>
+  <div>
+    <img id='Img' src='/images/gold/gld-reagan.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Reagan Ring in Gold'>
+      <input type='hidden' name="price" value='$20'>
+      <p id='detail'>Name: Reagan<br>Style: Ring<br>Metal: Gold<br>Season: Fall 2018<br>Price: $20</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>  
+  <div>
+    <img id='Img' src='/images/silver/rhod-calista.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Calista Earrings in Silver'>
+      <input type='hidden' name="price" value='$25'>
+      <p id='detail'>Name: Calista<br>Style: Earrings<br>Metal: Silver<br>Season: Winter 2017<br>Price: $25</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/silver/rhod-ember.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Ember Necklace in Silver'>
+      <input type='hidden' name="price" value='$15'>
+      <p id='detail'>Name: Ember<br>Style: Necklace<br>Metal: Silver<br>Season: Fall 2018<br>Price: $15</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div> 
+  <div>
+    <img id='Img' src='/images/silver/rhod-angela.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Angela Bracelet in Silver'>
+      <input type='hidden' name="price" value='$10'>
+      <p id='detail'>Name: Angela<br>Style: Bracelet<br>Metal: Silver<br>Season: Fall 2018<br>Price: $10</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div> 
+  <div>
+    <img id='Img' src='/images/rsg/rsg-allie.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Allie Earrings in Rose Gold'>
+      <input type='hidden' name="price" value='$50'>
+      <p id='detail'>Name: Allie<br>Style: Earrings<br>Metal: Rose Gold<br>Stone: Ivory Mother of Pearl<br>Price: $50</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/rsg/rsg-corza.png'>
+    <form action='/products/AddToCart' method='POST'>
+      <input type='hidden' name="item" value='Corza Earrings in Rose Gold'>
+      <input type='hidden' name="price" value='$30'>
+      <p id='detail'>Name: Corza<br>Style: Earrings<br>Metal: Rose Gold<br>Season: Winter 2018<br>Price: $30</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/rsg/rsg-joel.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Joel Ring in Rose Gold'>
+      <input type='hidden' name="price" value='$5'>
+      <p id='detail'>Name: Joel<br>Style: Ring<br>Metal: Rose Gold<br>Season: Winter 2018<br>Price: $5</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/rsg/rsg-pryde.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Pryde Ring in Rose Gold'>
+      <input type='hidden' name="price" value='$15'>
+      <p id='detail'>Name: Pryde<br>Style: Ring<br>Metal: Rose Gold<br>Season: Winter 2018<br>Price: $15</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/gunmetal/gnmt-alex.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Alex Earrings in Gunmetal'>
+      <input type='hidden' name="price" value='$30'>
+      <p id='detail'>Name: Alex<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Abalone<br>Price: $30</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/gunmetal/gnmt-elora.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Elora Earrings in Gunmetal'>
+      <input type='hidden' name="price" value='$35'>
+      <p id='detail'>Name: Elora<br>Style: Earrings<br>Metal: Gunmetal<br>Stone: Sky Blue Illusion<br>Price: $35</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/gunmetal/gnmt-darrell.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Darrell Necklace in Gunmetal'>
+      <input type='hidden' name="price" value='$55'>
+      <p id='detail'>Name: Darrell<br>Style: Necklace<br>Metal: Gunmetal<br>Stones: Abalone, Dichroic Glass, and Clear<br>Price: $55</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/gunmetal/ngnmt-malia.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Malia Bracelet Set in Navy-Gunmetal'>
+      <input type='hidden' name="price" value='$20'>
+      <p id='detail'>Name: Malia<br>Style: Bracelet<br>Metal: Navy-Gunmetal<br>Season: Winter 2018<br>Price: $20</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/colorful/wht-thomas.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Thomas Earrings in Matte White'>
+      <input type='hidden' name="price" value='$20'>
+      <p id='detail'>Name: Thomas<br>Style: Earrings<br>Metal: Matte White<br>Season: Spring 2018<br>Price: $20</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/colorful/wht-phara.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Phara Necklace in Matte White'>
+      <input type='hidden' name="price" value='$45'>
+      <p id='detail'>Name: Phara<br>Style: Necklace<br>Metal: Matte White<br>Season: Spring 2018<br>Price: $45</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
 
     <footer id='footer-show'>
       <a  id='back' href='/products'> Back </a>

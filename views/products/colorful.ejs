@@ -8,24 +8,41 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Gold Products</title>
 </head>
-<body id='gold-page'>
+<body id='item-page'>
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
-        <a id='opt' href='/gunmetal'> Gunmetal </a><br>
         <a id='opt' href='/gold'> Gold </a><br>
         <a id='opt' href='/silver'> Silver </a><br>
         <a id='opt' href='/rsg'> Rose Gold </a><br>
+        <a id='opt' href='/gunmetal'> Gunmetal </a><br>
         <a id='opt' href='/products/show'> All Products </a><br>
         <a id='cart' href='/products/orders'> View Cart </a><br>
       </div>
     </nav>
   </div>
   <div>
-    
+    <img id='Img' src='/images/colorful/wht-thomas.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Thomas Earrings in Matte White'>
+      <input type='hidden' name="price" value='$20'>
+      <p id='detail'>Name: Thomas<br>Style: Earrings<br>Metal: Matte White<br>Season: Spring 2018<br>Price: $20</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
   </div>
+  <div>
+    <img id='Img' src='/images/colorful/wht-phara.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Phara Necklace in Matte White'>
+      <input type='hidden' name="price" value='$45'>
+      <p id='detail'>Name: Phara<br>Style: Necklace<br>Metal: Matte White<br>Season: Spring 2018<br>Price: $45</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+
   <footer id='footer-show'>
     <a id='back' href='/products'> Back </a>
   </footer>
+
 </body>
 </html>

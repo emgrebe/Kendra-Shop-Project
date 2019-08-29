@@ -1,4 +1,4 @@
-var Product = require('../models/product');
+var Product = require('../models/product')
 
 module.exports = {
   show
@@ -7,7 +7,6 @@ module.exports = {
 function show(req, res) {
   Product.findById(req.params.id, function(err, product) {
     if (err) console.error(err)
-    res.render('products/gunmetal', {title: 'Gunmetal', product});
+    res.render('products/colorful', {title: 'Colorful', product});
   });
 }
-

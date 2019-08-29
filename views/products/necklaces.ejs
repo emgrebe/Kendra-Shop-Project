@@ -8,26 +8,17 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Necklace Products</title>
 </head>
-<body id='necklace-page'>
+<body id='item-page'>
   <div id='nav' class='navbar-fixed'>
     <nav>
       <div class='nav-wrapper'>
-          <a id='opt' href='/bracelets'> Bracelets </a><br>
-          <a id='opt' href='/earrings'> Earrings </a><br>
-          <a id='opt' href='/rings'> Rings </a><br>
-          <a id='opt' href='/products/show'> All Products </a>
-          <a id='cart' href='/products/orders'> View Cart </a>
+        <a id='opt' href='/earrings'> Earrings </a><br>
+        <a id='opt' href='/bracelets'> Bracelets </a><br>
+        <a id='opt' href='/rings'> Rings </a><br>
+        <a id='opt' href='/products/show'> All Products </a>
+        <a id='cart' href='/products/orders'> View Cart </a>
       </div>
     </nav>
-  </div>
-  <div>
-    <img id='Img' src='/images/gunmetal/gnmt-darrell.png'>
-    <form action='/products/addToCart' method='POST'>
-      <input type='hidden' name="item" value='Darrell Necklace in Gunmetal'>
-      <input type='hidden' name="price" value='$55'>
-      <p id='detail'>Name: Darrell<br>Style: Necklace<br>Metal: Gunmetal<br>Stones: Abalone, Dichroic Glass, and Clear<br>Price: $55</p>
-      <input type='submit' value='Add To Cart'>
-    </form>
   </div>
   <div>
     <img id='Img' src='/images/gold/gld-brett.png'>
@@ -47,6 +38,25 @@
       <input type='submit' value='Add To Cart'>
     </form>
   </div>
+  <div>
+    <img id='Img' src='/images/gunmetal/gnmt-darrell.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Darrell Necklace in Gunmetal'>
+      <input type='hidden' name="price" value='$55'>
+      <p id='detail'>Name: Darrell<br>Style: Necklace<br>Metal: Gunmetal<br>Stones: Abalone, Dichroic Glass, and Clear<br>Price: $55</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  <div>
+    <img id='Img' src='/images/colorful/wht-phara.png'>
+    <form action='/products/addToCart' method='POST'>
+      <input type='hidden' name="item" value='Phara Necklace in Matte White'>
+      <input type='hidden' name="price" value='$45'>
+      <p id='detail'>Name: Phara<br>Style: Necklace<br>Metal: Matte White<br>Season: Spring 2018<br>Price: $45</p>
+      <input type='submit' value='Add To Cart'>
+    </form>
+  </div>
+  
   <footer id='footer-show'>
     <a id='back' href='/products'> Back </a>
   </footer>
