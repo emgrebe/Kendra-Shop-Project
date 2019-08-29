@@ -1,10 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var itemSchema = new Schema({
-  // quantity: Number,
-  item: String,
-  price: Number
+var cartSchema = new Schema({
+    item: String, 
+    price: String
 });
 
 var ksUserSchema = new Schema({
@@ -12,7 +11,7 @@ var ksUserSchema = new Schema({
   name: String,
   address: String,
   googleId: String,
-  cart: [itemSchema]
+  cart: [cartSchema]
 });
 
 

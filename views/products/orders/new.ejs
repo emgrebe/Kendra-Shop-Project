@@ -8,10 +8,28 @@
   <title>Document</title>
 </head>
 <body>
-  <h1> <%= user.name %> </h1>
-  <% user.cart.forEach(function(item) { %>
-    <%- item.item %>
-    <%= item.price %>
-  <% }) %>
+  <div class='navbar-fixed'>
+    <nav>
+      <div class='nav-wrapper'>
+        <a id='allprod' href='/products/show'> All Products </a>
+      </div> 
+    </nav>
+  </div>
+    <h1>Welcome to Your Cart</h1>
+    <h2> <%= user.name %> </h2>
+    <h5>Your Items You Have Selected are Shown Below:</h5>
+  <ul>
+    <% user.cart.forEach(function(item) { %>
+    <li>
+      <%- item.item %>
+      <%= item.price %>
+      <% }) %>
+    </li>
+  </ul>
+
+  <footer id='footer-show'>
+    <a  id='back' href='/products'> Back </a>
+  </footer>
+
 </body>
 </html>
