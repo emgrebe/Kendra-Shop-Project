@@ -3,7 +3,8 @@ var Schema = mongoose.Schema;
 
 var cartSchema = new Schema({
     item: String, 
-    price: String
+    price: String,
+    quantity: Number
 });
 
 var ksUserSchema = new Schema({

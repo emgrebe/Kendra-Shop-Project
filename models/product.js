@@ -32,6 +32,10 @@ var productSchema = new Schema({
     min: 10,
     max: 150
   },
+  quantity: {
+    type: Number,
+    default: 1
+  },
   image: String,
   reviews: [reviewSchema]
 });

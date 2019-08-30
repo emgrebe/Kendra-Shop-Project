@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
+var methodOverride = require('method-override');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use(session( {
   resave: false,
   saveUninitialized: true
 }));
+app.use(methodOverride('_method'));
 app.use(passport.initialize());
 app.use(passport.session());
 
